@@ -22,9 +22,10 @@ namespace GreenCredits.Web.Controllers
             var user = ObjectFactory.GetInstance<IFarmerRepository>().Find(collection["email"]);
             if (user != null && collection["password"] == user.Password)
             {
-                Session["email"] = user.email;
+                Session["id"] = user.id;
+                Session["user"] = user;
                 Session["password"] = user.Password;
-                return RedirectToRoute("/dashboard");
+                return new RedirectResult("/dashboard");
             }
             return View();
         }

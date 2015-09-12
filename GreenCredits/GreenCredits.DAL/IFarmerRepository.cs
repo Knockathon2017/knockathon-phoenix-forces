@@ -10,7 +10,7 @@ namespace GreenCredits.DAL
     {
         List<Farmer> GetAll();
         Farmer Add(Farmer farmer);
-        List<CarbonAsset> GetByFramerId(long fid);
+        List<CarbonAsset> GetByFramerId(long? fid);
         Farmer Find(string email);
         //Employee Find(int? id);
         //Employee Add(Employee employee);

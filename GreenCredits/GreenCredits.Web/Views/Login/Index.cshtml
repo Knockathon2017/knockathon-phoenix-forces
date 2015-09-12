@@ -24,18 +24,18 @@
 
             <div class="clr"></div>
 
-            <form class="form_container">
+            <form class="form_container" action="/login" method="post">
                 <div class="row_block">
                     <label>Email</label>
-                    <input type="text" placeholder="Enter Email" />
+                    <input type="text" placeholder="Enter Email" name="email"/>
                 </div>
                 <div class="row_block">
                     <label>Password</label>
-                    <input type="text" placeholder="Password" />
+                    <input type="password" placeholder="Password" name="password"/>
                 </div>
 
                 <div class="row_block">
-                    <a href="dashboard.html" class="button">Login</a>
+                    <input type="submit" value="Login" class="button"/>
                 </div>
 
             </form>

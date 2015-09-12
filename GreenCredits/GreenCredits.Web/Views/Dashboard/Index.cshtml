@@ -14,6 +14,7 @@
                    <div class="header">
                        <a href="index.html" class="logo">GreenCredits<img src="/content/images/logo_part.png" /></a>
                        <ul class="top_nav">
+                           <li>Welcome @ViewBag.UserFullName</li>
                            <li><a href="/logout">Logout</a></li>
                        </ul>
                    </div>
@@ -32,6 +33,7 @@
                                        <td>Location</td>
                                        <td>No. of trees</td>
                                        <td>Organization</td>
+                                       <td>Passive trees</td>
                                        <td>&nbsp;</td>
                                    </tr>
                                    @foreach (var item in Model)
@@ -42,9 +44,18 @@
 
                                            <td>@item.address</td>
                                            <td>@item.activetreecount</td>
-                                           <td>@item.Companyname</td>
+                                           <td>@item.companyname</td>
+                                           <td>--</td>
                                            <td><a href="#">Edit</a> <a href="#">Delete</a></td>
                                        </tr>
+    <tr>
+
+        <td>@item.address</td>
+        <td>--</td>
+        <td>--</td>
+        <td>@item.passivetreecount</td>
+        <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+    </tr>
                                    }
 
                                </table>
@@ -80,19 +91,13 @@
                                        <label>Full Name</label>
                                        <input type="text" placeholder="Full Name" />
                                    </div>
-                                   <div class="row_block">
-                                       <label>Date of Birth</label>
-                                       <input type="text" placeholder="Date of Birth" />
-                                   </div>
+                                  
                                    <div class="row_block">
                                        <label>Mobile</label>
                                        <input type="text" placeholder="Mobile" />
                                    </div>
 
-                                   <div class="row_block">
-                                       <label>Landline</label>
-                                       <input type="text" placeholder="Landline" />
-                                   </div>
+                                   
 
                                    <div class="row_block">
                                        <label>Address</label>

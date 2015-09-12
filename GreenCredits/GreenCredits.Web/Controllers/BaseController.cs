@@ -9,14 +9,14 @@ namespace GreenCredits.Web.Controllers
 {
     public class BaseController:Controller
     {
-       protected virtual void OnAuthorization(AuthorizationContext filterContext)
+       protected override void OnAuthorization(AuthorizationContext filterContext)
         {
-           if(Session["email"] != null) 
+           if(Session["id"] != null) 
            {
                base.OnAuthorization(filterContext);
                return;
            }
-           filterContext.Result = new RedirectResult("/");
+           filterContext.Result = new RedirectResult("/login");
            
         }
     }
