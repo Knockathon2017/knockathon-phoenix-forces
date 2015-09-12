@@ -28,6 +28,20 @@ body {
     clear: both;
 }
 
+.fb_iframe_widget {
+    position: fixed !important;
+    right: 220px;
+    top: 20px;
+    z-index: 5;
+}
+
+.twitter-follow-button {
+    position: fixed !important;
+    right: 364px;
+    top: 24px;
+    z-index: 5;
+}
+
 #error_msg {
     color: #DC0000;
     display: block;
@@ -201,6 +215,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     background-color: #fff;
+    vertical-align: top;
+    height: 350px;
 }
 
 .who_for_section .inside_unit .farmers_section .heading,
@@ -257,6 +273,8 @@ body {
     font-weight: normal;
     background-color: #fff;
     color: #000;
+    vertical-align: top;
+    height: 240px;
 }
 
 .how_it_works .inside_unit .farmers_section .heading,
