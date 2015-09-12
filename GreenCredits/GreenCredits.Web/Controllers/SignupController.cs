@@ -38,17 +38,23 @@ namespace GreenCredits.Web.Controllers
                 if (!string.IsNullOrEmpty(email))
                 {
                     if (ObjectFactory.GetInstance<IFarmerRepository>().Find(email) == null)
-                        ObjectFactory.GetInstance<IFarmerRepository>().Add(new Farmer() { email = email });
+                    {
+                        var farmer = new Farmer() { email = email };
+                        ObjectFactory.GetInstance<IFarmerRepository>().Add(farmer);
+                        ViewBag.FarmerId = farmer.id;
+                        return RedirectToAction("Index");
+                    }
 
                 }
                 // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                return new RedirectResult("/login");
+                
             }
             catch
             {
-                return View();
+                
             }
+            return new RedirectResult("/home");
         }
 
         // GET: Signup/Edit/5
@@ -59,7 +65,7 @@ namespace GreenCredits.Web.Controllers
 
         // POST: Signup/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(FormCollection collection)
         {
             try
             {

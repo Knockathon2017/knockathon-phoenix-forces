@@ -27,10 +27,10 @@
 
         <div class="fb-like" data-href="https://www.greencredits.com" data-width="20px" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         <div class="header">
-            <a href="index.html" class="logo">GreenCredits<sup>TM</sup><img src="/content/images/logo_part.png" /></a>
+            <a href="/home" class="logo">GreenCredits<sup>TM</sup><img src="/content/images/logo_part.png" /></a>
             <ul class="top_nav">
-                <li><a href="index.html#how_it_works">How it works</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="/home#how_it_works">How it works</a></li>
+                <li><a href="/home#about">About</a></li>
             </ul>
         </div>
         <div class="inner_section">
@@ -44,14 +44,15 @@
                     </div>
                     <form id="form_farmer">
                         <input type="hidden" name="usertype" value="farmer"/>
+                        <input type="hidden" name="userId" value="@ViewBag.FarmerId" />
                         <div class="row_block">
                             <label>Full Name</label>
-                            <input id="fname" name="fname" type="text" placeholder="Full Name" />
+                            <input id="fname" name="fname" type="text" placeholder="Full Name" autocomplete="off"/>
                         </div>
                         <div class="row_block">
-                            <label>Date of Birth</label>
-                            <input id="dob" name="dob" type="text" placeholder="Date of Birth" />
-                        </div>
+							<label>Password</label>
+                            <input id="password" name="password" type="password" placeholder="Passsword" autocomplete="off" />
+						</div>
                         <div class="row_block">
                             <label>Mobile</label>
                             <input id="mobile" name="mobile" type="text" placeholder="Mobile" />
@@ -70,6 +71,14 @@
                         <div class="row_block">
                             <label>Company Name</label>
                             <input id="cname" name="cname" type="text" placeholder="Company Name" />
+                        </div>
+                        <div class="row_block">
+                            <label>Password</label>
+                            <input id="password" name="password" type="password" placeholder="Passsword" />
+                        </div>
+                        <div class="row_block">
+                            <label>Email</label>
+                            <input id="email" name="email" type="text" placeholder="Email" />
                         </div>
                         <div class="row_block">
                             <label>Product</label>
@@ -95,7 +104,7 @@
                         <span id="error_msg" style="display:none;">Get Started</span>
                     </div>
                     <div class="row_block">
-                        <a id="btnSubmit" href="javascript:void(0);" class="button">Get Started</a> or <a href="/dashboard">Skip</a>
+                        <a id="btnSubmit" href="javascript:void(0);" class="button">Get Started</a>
                     </div>
                 </div>
                 <div class="clr"></div>

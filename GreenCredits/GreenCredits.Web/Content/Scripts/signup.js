@@ -49,7 +49,7 @@ Signup.prototype = (function () {
             me.fm = new FormManager({ form: "#form_farmer", loader: "#asdf" });
             var fmo = {
 
-                url: "/xyz",
+                url: "/signup/edit",
                 data: "",
                 callback: function (sysError, response) {
                     if (!response.status === 200) {

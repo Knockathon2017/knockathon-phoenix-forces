@@ -16,6 +16,7 @@ namespace GreenCredits.DAL
         public FarmerRepository(string connnectionString)
         {
             _db = new MySqlConnection(connnectionString);
+            _db.Open();
         }
         public List<Farmer> GetAll()
         {
