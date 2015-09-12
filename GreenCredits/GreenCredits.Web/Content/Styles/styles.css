@@ -401,6 +401,7 @@ body {
 
 .dashboard_section .inside_unit .heading {
     font-size: 22px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 
@@ -412,8 +413,7 @@ body {
 .dashboard_section .content_container {
     float: left;
     width: 50%;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding: 0 50px 50px;
 }
 
 .dashboard_nav {
@@ -439,11 +439,22 @@ body {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
+    border: 1px solid #dddddd;
 }
 
 .grid_container tr td {
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid #dddddd;
     padding: 5px 10px;
+    background-color: #fcfcfc;
+    font-size: 16px;
+}
+
+.grid_container tr:nth-child(odd) td {
+    background-color: #f5f5f5;
+}
+
+.grid_container tr:hover td {
+    background-color: #ffffcb;
 }
 
 .grid_container tr:last-child td {
@@ -451,7 +462,46 @@ body {
 }
 
 .grid_container tr.head td {
+    border-bottom: 2px solid #dddddd;
     font-weight: bold;
+}
+
+.grid_container tr.head:hover td {
+    background-color: #f5f5f5;
+}
+
+.gallery_carousel {
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+.gallery_carousel img {
+    border: 5px solid #fff;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.stats_container {
+    float: left;
+    width: 100%;
+    display: block;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    padding: 40px;
+    margin: 40px 0;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.stats_container .help_txt {
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 10px;
 }
 
 
