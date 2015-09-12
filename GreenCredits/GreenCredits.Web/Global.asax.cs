@@ -27,5 +27,10 @@ namespace GreenCredits.Web
             builder.For(typeof(IFarmerRepository)).Use(typeof(FarmerRepository))
                 .Ctor<string>("connectionString").Is(connectionString);
         };
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            Exception exception = Server.GetLastError();
+        }
     }
 }

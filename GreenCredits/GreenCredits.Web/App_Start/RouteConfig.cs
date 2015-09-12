@@ -20,8 +20,8 @@ namespace GreenCredits.Web
 
             routes.MapRoute(
                name: "logout",
-               url: "logout",
-               defaults: new { controller = "Login", action = "Logout", id = UrlParameter.Optional }
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Logout", action = "Index"}
            );
             routes.MapRoute(
                 name: "Default",

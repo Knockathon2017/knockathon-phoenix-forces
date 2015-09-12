@@ -105,6 +105,7 @@
     <Compile Include="Controllers\FarmerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\SignupController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -132,6 +133,7 @@
     <Folder Include="Content\Styles\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Farmer\" />
+    <Folder Include="Views\Logout\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GreenCredits.DAL\GreenCredits.DAL.csproj">
