@@ -28,5 +28,12 @@ namespace GreenCredits.Web.Controllers
             }
             return View();
         }
+        
+        public ActionResult Logout()
+        {
+
+            Session.Clear();
+            return View("Index");
+        }
     }
 }

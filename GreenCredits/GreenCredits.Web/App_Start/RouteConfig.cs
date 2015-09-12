@@ -17,6 +17,12 @@ namespace GreenCredits.Web
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Dashboard", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+               name: "logout",
+               url: "logout",
+               defaults: new { controller = "Login", action = "Logout", id = UrlParameter.Optional }
+           );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
