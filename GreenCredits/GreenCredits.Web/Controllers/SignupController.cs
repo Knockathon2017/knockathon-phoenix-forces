@@ -93,5 +93,17 @@ namespace GreenCredits.Web.Controllers
                 return View();
             }
         }
+
+        [HttpGet]
+        public ActionResult ConfirmEmail()
+        {
+            return View("ConfirmEmail.cshtml");
+        }
+
+        [HttpPost]
+        public ActionResult ConfirmEmail(FormCollection collection)
+        {
+            return View("ConfirmEmail.cshtml");
+        }
     }
 }
