@@ -40,7 +40,7 @@ namespace GreenCredits.DAL
 
         public List<CarbonAsset> GetByFramerId(long fid)
         {
-            string query = "SELECT * ,( select companyname from traders where id = traderid) as companyname , 0 as isActive  FROM carbonasset WHERE farmerid =" + fid;
+            string query = "SELECT * ,( select address from traders where id = traderid) as companyname , 0 as isActive  FROM carbonasset WHERE farmerid =" + fid;
             return this._db.Query<CarbonAsset>(query).ToList();
         }
     }

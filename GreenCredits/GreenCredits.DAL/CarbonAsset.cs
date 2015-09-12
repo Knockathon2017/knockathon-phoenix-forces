@@ -14,6 +14,6 @@ namespace GreenCredits.DAL
         public int activetreecount { get; set; }
         public long traderid { get; set; }
         public int passivetreecount { get; set; }
-        public string Companyname { get; set; }
+        public string companyname { get; set; }
     }
 }

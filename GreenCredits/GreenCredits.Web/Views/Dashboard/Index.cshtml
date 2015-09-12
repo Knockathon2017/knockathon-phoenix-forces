@@ -30,6 +30,7 @@
                             <td>Location</td>
                             <td>No. of trees</td>
                             <td>Organization</td>
+                            <td>Passive tree count</td>
                             <td>&nbsp;</td>
                         </tr>
                         @foreach (var item in Model)
@@ -40,10 +41,19 @@
                       
                             <td>@item.address</td>
                             <td>@item.activetreecount</td>
-                            <td>@item.Companyname</td>
+                            <td>@item.companyname</td>
+                            <td>-</td>
                             <td><a href="#">Edit</a> <a href="#">Delete</a></td>
                         </tr>
-                        }
+    <tr>
+
+        <td>@item.address</td>
+        <td>-</td>
+        <td>-</td>
+        <td>@item.passivetreecount</td>
+        <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+    </tr>
+                            }
                         
                     </table>
 
