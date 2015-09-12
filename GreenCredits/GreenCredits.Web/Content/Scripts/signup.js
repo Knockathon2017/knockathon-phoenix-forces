@@ -55,7 +55,7 @@ Signup.prototype = (function () {
                     if (!response.status === 200) {
                         //error
                         return;
-                    } 
+                    }
                 }
             };
 
