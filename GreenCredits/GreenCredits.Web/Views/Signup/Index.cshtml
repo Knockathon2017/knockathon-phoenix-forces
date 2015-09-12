@@ -44,7 +44,7 @@
                     </div>
                     <form id="form_farmer">
                         <input type="hidden" name="usertype" value="farmer"/>
-                        <input type="hidden" name="userId" value="@ViewBag.FarmerId" />
+                        <input type="hidden" name="userId" value="@TempData["FarmerId"]" />
                         <div class="row_block">
                             <label>Full Name</label>
                             <input id="fname" name="fname" type="text" placeholder="Full Name" autocomplete="off"/>

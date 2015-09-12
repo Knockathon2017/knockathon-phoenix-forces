@@ -41,7 +41,8 @@ namespace GreenCredits.Web.Controllers
                     {
                         var farmer = new Farmer() { email = email };
                         ObjectFactory.GetInstance<IFarmerRepository>().Add(farmer);
-                        ViewBag.FarmerId = farmer.id;
+                        ViewBag.FarmerId = farmer.id.ToString();
+                        TempData["FarmerId"] = farmer.id.ToString();
                         return RedirectToAction("Index");
                     }
 
@@ -70,8 +71,11 @@ namespace GreenCredits.Web.Controllers
             try
             {
                 // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                var user = ObjectFactory.GetInstance<IFarmerRepository>().FindById(long.Parse(collection["userId"]));
+                Session["id"] = user.id;
+                Session["user"] = user;
+                Session["password"] = user.Password;
+                return new RedirectResult("/dashboard");
             }
             catch
             {

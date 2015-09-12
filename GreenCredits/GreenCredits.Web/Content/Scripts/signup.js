@@ -44,6 +44,7 @@ Signup.prototype = (function () {
                 } else {
                     me.fm1.post(fmo1);
                 }
+                //window.location = "/dashboard";
             });
 
             me.fm = new FormManager({ form: "#form_farmer", loader: "#asdf" });

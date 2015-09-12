@@ -38,6 +38,12 @@ namespace GreenCredits.DAL
             return this._db.Query<Farmer>(query).SingleOrDefault();
         }
 
+        public Farmer FindById(long id)
+        {
+            string query = "SELECT * FROM farmers WHERE id = '" + id + "'";
+            return this._db.Query<Farmer>(query).SingleOrDefault();
+        }
+
 
         public List<CarbonAsset> GetByFramerId(long? fid)
         {
