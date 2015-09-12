@@ -7,7 +7,7 @@ namespace GreenCredits.DAL
 {
     public class Farmer
     {
-        public long slno { get; set; }
+        public long id { get; set; }
         public string FullName { get; set; }
         public string Gender { get; set; }
         public string MobileNo { get; set; }
@@ -18,5 +18,8 @@ namespace GreenCredits.DAL
         public string PDistrict { get; set; }
         public string PBlock { get; set; }
         public string PVill { get; set; }
+        public string email { get; set; }
+
+        public string Password { get; set; }
     }
 }

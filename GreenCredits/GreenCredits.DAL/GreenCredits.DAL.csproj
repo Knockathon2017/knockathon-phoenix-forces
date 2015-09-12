@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarbonAsset.cs" />
     <Compile Include="Farmer.cs" />
     <Compile Include="FarmerRepository.cs" />
     <Compile Include="IFarmerRepository.cs" />

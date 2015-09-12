@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GreenCredits.DAL;
+using StructureMap;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,6 +34,12 @@ namespace GreenCredits.Web.Controllers
         {
             try
             {
+                var email = collection["email"];
+                if(!string.IsNullOrEmpty(email))
+                {
+                    ObjectFactory.GetInstance<IFarmerRepository>().Add(new Farmer() { email = email });
+
+                }
                 // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
