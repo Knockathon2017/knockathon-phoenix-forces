@@ -35,9 +35,10 @@ namespace GreenCredits.Web.Controllers
             try
             {
                 var email = collection["email"];
-                if(!string.IsNullOrEmpty(email))
+                if (!string.IsNullOrEmpty(email))
                 {
-                    ObjectFactory.GetInstance<IFarmerRepository>().Add(new Farmer() { email = email });
+                    if (ObjectFactory.GetInstance<IFarmerRepository>().Find(email) == null)
+                        ObjectFactory.GetInstance<IFarmerRepository>().Add(new Farmer() { email = email });
 
                 }
                 // TODO: Add insert logic here

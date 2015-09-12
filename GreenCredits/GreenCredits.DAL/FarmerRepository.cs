@@ -25,7 +25,7 @@ namespace GreenCredits.DAL
 
         public Farmer Add(Farmer farmer)
         {
-            var sqlQuery = "INSERT INTO farmers (email) VALUES(@email); " + "SELECT CAST(SCOPE_IDENTITY() as int)";
+            var sqlQuery = "INSERT INTO farmers (email) VALUES('"+farmer.email+"'); " + " SELECT LAST_INSERT_ID() ";
             var id = this._db.Query<int>(sqlQuery, farmer).Single();
             farmer.id = id;
             return farmer;
