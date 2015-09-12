@@ -14,8 +14,8 @@ namespace GreenCredits.Web.Controllers
         
         public ActionResult Index()
         {
-            ViewBag.UserFullName = (Session["user"] as Farmer).FullName ;
-            var model = ObjectFactory.GetInstance<IFarmerRepository>().GetByFramerId(Session["id"] as long?);
+            //var model = ObjectFactory.GetInstance<IFarmerRepository>().GetByFramerId(18);
+            var model = new List<CarbonAsset>();
             return View(model);
         }
     }
