@@ -7,6 +7,8 @@
     <title>GreenCredits</title>
     <link href="/content/styles/styles.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Josefin+Sans' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="~/content/Scripts/signup.js"></script>
     <body>
         <div class="header">
             <a href="index.html" class="logo">GreenCredits<img src="/content/images/logo_part.png" /></a>
@@ -19,42 +21,67 @@
             <div class="inside_unit">
                 <div class="heading">Provide your information</div>
 
-                <form class="form_container">
+                <div class="form_container">
+                    <div id="btns" class="row_block">
+                        <a id="btnFarmer" href="javascript:void(0);" class="tab_item active">I'm a farmer</a>
+                        <a id="btnTrader" href="javascript:void(0);" class="tab_item">I'm a trader</a>
+                    </div>
+                    <form id="form_farmer">
+                        <input type="hidden" name="usertype" value="farmer"/>
+                        <div class="row_block">
+                            <label>Full Name</label>
+                            <input id="fname" name="fname" type="text" placeholder="Full Name" />
+                        </div>
+                        <div class="row_block">
+                            <label>Date of Birth</label>
+                            <input id="dob" name="dob" type="text" placeholder="Date of Birth" />
+                        </div>
+                        <div class="row_block">
+                            <label>Mobile</label>
+                            <input id="mobile" name="mobile" type="text" placeholder="Mobile" />
+                        </div>
+                        <div class="row_block">
+                            <label>Address</label>
+                            <input id="address" name="address" type="text" placeholder="Address Line" />
+                            <input id="state" name="state" type="text" class="small_input" placeholder="State" />
+                            <input id="city" name="city" type="text" class="small_input" placeholder="City" />
+                            <input id="district" name="district" type="text" class="small_input" placeholder="District" />
+                        </div>
+                    </form>
+                    
+                    <form id="form_trader" style="display:none;">
+                        <input type="hidden" name="usertype" value="trader" />
+                        <div class="row_block">
+                            <label>Company Name</label>
+                            <input id="cname" name="cname" type="text" placeholder="Company Name" />
+                        </div>
+                        <div class="row_block">
+                            <label>Product</label>
+                            <input id="product" name="product" type="text" placeholder="Product" />
+                        </div>
+                        <div class="row_block">
+                            <label>Sector</label>
+                            <input id="sector" name="sector" type="text" placeholder="Sector" />
+                        </div>
+                        <div class="row_block">
+                            <label>Region</label>
+                            <input id="region" name="region" type="text" placeholder="Region" />
+                        </div>
+                        <div class="row_block">
+                            <label>Address</label>
+                            <input id="address" name="address" type="text" placeholder="Address Line" />
+                            <input id="state" name="state" type="text" class="small_input" placeholder="State" />
+                            <input id="city" name="city" type="text" class="small_input" placeholder="City" />
+                            <input id="district" name="district" type="text" class="small_input" placeholder="District" />
+                        </div>
+                    </form>
                     <div class="row_block">
-                        <a href="#" class="tab_item active">I'm a farmer</a>
-                        <a href="#" class="tab_item">I'm a trader</a>
+                        <span id="error_msg" style="display:none;">Get Started</span>
                     </div>
                     <div class="row_block">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Full Name" />
+                        <a id="btnSubmit" href="javascript:void(0);" class="button">Get Started</a> or <a href="/dashboard">Skip</a>
                     </div>
-                    <div class="row_block">
-                        <label>Date of Birth</label>
-                        <input type="text" placeholder="Date of Birth" />
-                    </div>
-                    <div class="row_block">
-                        <label>Mobile</label>
-                        <input type="text" placeholder="Mobile" />
-                    </div>
-
-                    <div class="row_block">
-                        <label>Landline</label>
-                        <input type="text" placeholder="Landline" />
-                    </div>
-
-                    <div class="row_block">
-                        <label>Address</label>
-                        <input type="text" placeholder="Address Line" />
-                        <input type="text" class="small_input" placeholder="State" />
-                        <input type="text" class="small_input" placeholder="City" />
-                        <input type="text" class="small_input" placeholder="District" />
-                    </div>
-
-                    <div class="row_block">
-                        <a href="dashboard.html" class="button">Get Started</a> or <a href="/dashboard">Skip</a>
-                    </div>
-
-                </form>
+                </div>
                 <div class="clr"></div>
             </div>
         </div>
@@ -62,6 +89,10 @@
         <div class="copyright_section">
             &copy GreenCredits 2015
         </div>
-
+        <script>
+            $(document).ready(function () {
+                var objSignup = new Signup();
+            });
+        </script>
     </body>
 </head>
