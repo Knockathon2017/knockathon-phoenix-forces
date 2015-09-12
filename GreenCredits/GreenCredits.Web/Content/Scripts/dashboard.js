@@ -1,68 +1,25 @@
-var Signup = function (options) {
+var Dashboard = function (options) {
     this.init(options);
 };
 
-Signup.prototype = (function () {
-    var showError = function (msg) {
-        var me = this;
-        me.error.html(msg).show();
+Dashboard.prototype = (function () {
+    var template = {
+
     };
 
-    var clearForm = function () {
-
+    var showError = function (msg) {
+        var me = this;
+        
     };
 
     return {
         init: function (options) {
             var me = this;
-            me.btnFarmer = $("#btnFarmer");
-            me.btnTrader = $("#btnTrader");
-            me.formFarmer = $("#form_farmer");
-            me.formTrader = $("#form_trader");
-            me.btn = $("#btnSubmit");
+            //$("#displayAssets").template("displayAssets");
 
-            me.error = $("#error_msg");
-            var regex = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/); //regular expression to check 
-            me.btnFarmer.off("click").on("click", function (evt) {
-                me.btnTrader.removeClass("active");
-                me.btnFarmer.addClass("active");
-                me.formFarmer.show();
-                me.formTrader.hide();
-                me.fm.clear();
-            });
-            me.btnTrader.off("click").on("click", function (evt) {
-                me.btnTrader.addClass("active");
-                me.btnFarmer.removeClass("active");
-                me.formFarmer.hide();
-                me.formTrader.show();
-                me.fm1.clear();
-            });
-
-            me.btn.off("click").on("click", function (evt) {
-                if ($("#btns").find(".active").attr("id") === "btnFarmer") {
-                    me.fm.post(fmo);
-                } else {
-                    me.fm1.post(fmo1);
-                }
-            });
-
-            me.fm = new FormManager({ form: "#form_farmer", loader: "#asdf" });
+            me.fm = new FormManager({ form: "#form_add", loader: "#asdf" });
             var fmo = {
-
                 url: "/xyz",
-                data: "",
-                callback: function (sysError, response) {
-                    if (!response.status === 200) {
-                        //error
-                        return;
-                    } 
-                }
-            };
-
-            me.fm1 = new FormManager({ form: "#form_trader", loader: "#asdf" });
-            var fmo1 = {
-
-                url: "/abc",
                 data: "",
                 callback: function (sysError, response) {
                     if (!response.status === 200) {
@@ -71,8 +28,36 @@ Signup.prototype = (function () {
                     }
                 }
             };
+            $(document).off("click").on("click", function (event) {
+                if (event.target !== $("#addContainer")[0] && event.target !== $("#addAssetsBtn")[0] && !$.contains($("#addContainer")[0], event.target)) {
+                    $("#addContainer").hide();
+                    me.fm.clear();
+                }
+            });
+            $("#addAssetsBtn").off("click").on("click", function () {
+                $("#addContainer").show();
+            });
+            $("#saveAssets").off("click").on("click", function () {
+                me.fm.post(fmo);
+            });
+            $("#cancelAssets").off("click").on("click", function () {
+                $("#addContainer").hide();
+                me.fm.clear();
+            });
 
+            L.mapbox.accessToken = 'pk.eyJ1IjoiZXNodWdvZWwyNCIsImEiOiI1OTJmMWI4NmQ2YjhjYmUyZWUxNGE3N2ZhODkwZDczMSJ9.I75hZHvao74uIKTQZ88r-w';
+            var geocoder = L.mapbox.geocoder('mapbox.places')
+            var map = L.mapbox.map('map', 'eshugoel24.a5e4197d');
+            var mapLeaflet = map.setView([21.000, 78.000], 4);
+            var arr = ['Nagina, UP', 'New Delhi, DL', 'Jhansi, UP'];
 
+            for (var i = 0; i < arr.length; i++) {
+                geocoder.query(arr[i], showMap);
+            }
+
+            function showMap(err, data) {
+                L.marker([data.latlng[0], data.latlng[1]]).bindPopup('<button class="trigger">Say hi</button>').addTo(mapLeaflet);
+            }
         }
     };
 }());

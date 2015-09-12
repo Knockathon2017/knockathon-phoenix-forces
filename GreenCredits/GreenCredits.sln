@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio Express 2013 for Web
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenCredits.API", "AadharAPI\GreenCredits.API.csproj", "{22778A87-D9FA-4A8B-BB27-EABE0FBB8214}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenCredits.DAL", "GreenCredits.DAL\GreenCredits.DAL.csproj", "{D67BF2D9-9F2D-47CA-A405-83A1E92D3683}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenCredits.Web", "GreenCredits.Web\GreenCredits.Web.csproj", "{B187F8D3-F3CA-4D73-B8FE-2ABDCC550D46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EA7F4FDE-12C9-4010-9C7C-3DA2EEB86433}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

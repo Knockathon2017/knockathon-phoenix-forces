@@ -116,6 +116,8 @@
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Signup\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Signup\ConfirmEmail.cshtml" />
+    <Content Include="Views\Signup\ForgotPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,7 +149,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55342</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
