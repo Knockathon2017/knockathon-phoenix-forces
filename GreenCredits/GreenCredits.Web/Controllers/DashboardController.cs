@@ -18,5 +18,11 @@ namespace GreenCredits.Web.Controllers
             //var model = new List<CarbonAsset>();
             return View(model);
         }
+
+        public ActionResult Traders()
+        {
+            var traders =ObjectFactory.GetInstance<IFarmerRepository>().GetTraders();
+            return View(@"~/Views/Dashboard/TradersListView.cshtml",traders);
+        }
     }
 }

@@ -50,5 +50,12 @@ namespace GreenCredits.DAL
             string query = "SELECT * ,( select address from traders where id = traderid) as companyname , 0 as isActive  FROM carbonasset WHERE farmerid =" + fid;
             return this._db.Query<CarbonAsset>(query).ToList();
         }
+
+
+        public List<Traders> GetTraders()
+        {
+            string query = "SELECT * FROM traders WHERE website <> ''";
+            return this._db.Query<Traders>(query).ToList();
+        }
     }
 }

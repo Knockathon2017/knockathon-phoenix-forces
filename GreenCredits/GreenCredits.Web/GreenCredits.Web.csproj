@@ -107,6 +107,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +119,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Signup\ConfirmEmail.cshtml" />
     <Content Include="Views\Signup\ForgotPassword.cshtml" />
+    <Content Include="Views\Dashboard\TradersListView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
