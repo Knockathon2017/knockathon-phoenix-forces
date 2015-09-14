@@ -57,19 +57,21 @@ Signup.prototype = (function () {
                         //error
                         return;
                     }
+                    window.location = "/dashboard";
                 }
             };
 
             me.fm1 = new FormManager({ form: "#form_trader", loader: "#asdf" });
             var fmo1 = {
 
-                url: "/abc",
+                url: "/signup/edit",
                 data: "",
                 callback: function (sysError, response) {
                     if (!response.status === 200) {
                         //error
                         return;
                     }
+                    window.location = "/dashboard";
                 }
             };
 

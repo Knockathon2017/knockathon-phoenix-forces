@@ -75,7 +75,7 @@ namespace GreenCredits.Web.Controllers
                 Session["id"] = user.id;
                 Session["user"] = user;
                 Session["password"] = user.Password;
-                return new RedirectResult("/dashboard");
+                return Json(new { data = collection["usertype"], status = 200 }, JsonRequestBehavior.AllowGet);
             }
             catch
             {
