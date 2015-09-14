@@ -16,26 +16,11 @@
     <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
 </head>
 <body>
-    <div id="fb-root"></div>
-    <script>
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <a href="https://twitter.com/apegpbsk" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow us</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-
-    <div class="fb-like" data-href="https://www.greencredits.com" data-width="20px" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+    
     <div class="header">
         <a href="/home" class="logo">GreenCredits<sup>TM</sup><img src="/content/images/logo_part.png" /></a>
         <ul class="top_nav">
-            <li>Welcome @ViewBag.UserFullName</li>
+            <li>Welcome</li>
             <li><a href="/logout">Logout</a></li>
         </ul>
     </div>
@@ -101,8 +86,9 @@
 
                 </table>
 
+                <div class="heading">Statistics <a href="javascript:void(0);">Refresh</a></div>
                 <div class="stats_container">
-                    2000INR<span class="help_txt">earned so far</span>
+                    <span class="rupee_sign">₹</span>2000<span class="help_txt">earned so far</span>
                 </div>
 
                 <div class="heading" style="display:none;">Photo Gallery <a href="#">Upload New Photos</a></div>
@@ -121,8 +107,11 @@
                     <img src="/content/images/gallery3.png" />
                     <img src="/content/images/gallery4.png" />
                 </div>
+                <div class="heading">Maps <a href="javascript:void(0);">Refresh</a></div>
                 <div id='map' style="width:100%;height:400px;"></div>
             </div>
+
+            <div class="heading">Traders Listing <a href="javascript:void(0);">Refresh</a></div>
             @Html.Traders()
             @*<div class="content_container">
         <div class="heading">Update Profile</div>

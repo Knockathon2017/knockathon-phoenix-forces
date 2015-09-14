@@ -5,7 +5,6 @@
         <td>Address</td>
         <td>Product</td>
         <td>Web site</td>
-        <td>&nbsp;</td>
     </tr>
     @foreach (var item in Model)
     {
@@ -16,7 +15,7 @@
             <td>@item.address</td>
             <td>@item.place</td>
             <td>@item.product</td>
-            <td>@item.website</td>
+            <td><a href="@item.website" target="_blank">@item.website</a></td>
             
         </tr>
        

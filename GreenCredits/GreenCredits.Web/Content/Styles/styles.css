@@ -29,24 +29,17 @@ body {
 }
 
 .fb_iframe_widget {
-    position: fixed !important;
-    right: 220px;
-    top: 20px;
-    z-index: 5;
+    
 }
 
 .twitter-follow-button {
-    position: fixed !important;
-    right: 364px;
-    top: 24px;
-    z-index: 5;
+    margin-top: 5px;
 }
 
 #error_msg {
     color: #DC0000;
     display: block;
     font-size: 14px;
-    text-align: left;
 }
 
 .header {
@@ -60,7 +53,7 @@ body {
     left: 0px;
     right: 0px;
     border-bottom: 1px solid #ccc;
-    z-index: 1;
+    z-index: 9999;
 }
 
 .header .logo {
@@ -157,7 +150,7 @@ body {
     text-align: center;
     font-size: 50px;
     font-weight:  bold;
-    padding: 20% 20% 0;
+    padding: 20% 10% 0;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -313,7 +306,7 @@ body {
 }
 
 .signup_section .inside_unit #error_msg {
-    padding-left: 128px;
+    
 }
 
 .signup_section .inside_unit .heading {
@@ -355,6 +348,7 @@ body {
     font-weight:  bold;
     padding: 130px 20% 40px;
     font-family: 'Josefin Sans', sans-serif;
+    min-height: 700px;
 }
 
 .inner_section .inside_unit .heading {
@@ -434,9 +428,10 @@ body {
 }
 
 .dashboard_section .inside_unit .heading {
-    font-size: 22px;
+    font-size: 24px;
     padding-top: 30px;
     padding-bottom: 20px;
+    font-weight: bold;
 }
 
 .dashboard_section .inside_unit .heading a {
@@ -446,8 +441,8 @@ body {
 
 .dashboard_section .content_container {
     float: left;
-    width: 50%;
-    padding: 0 50px 50px;
+    width: 100%;
+    padding: 0 10px 50px;
 }
 
 .dashboard_nav {
@@ -481,6 +476,8 @@ body {
     padding: 5px 10px;
     background-color: #fcfcfc;
     font-size: 16px;
+    word-wrap: break-word;
+    vertical-align: top;
 }
 
 .grid_container tr:nth-child(odd) td {
@@ -527,9 +524,14 @@ body {
     -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
     padding: 40px;
-    margin: 40px 0;
+    margin: 0 0 40px 0;
     font-weight: bold;
     font-size: 40px;
+    color: #1a9b00;
+}
+
+.stats_container .rupee_sign {
+    font-weight: normal;
 }
 
 .stats_container .help_txt {
